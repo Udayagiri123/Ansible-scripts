@@ -1,0 +1,14 @@
+Ansible architecture follows control & worker nodes scenario.
+
+Control node or master node -
+It is a server which installed ansible. Additionally we will contain the worker nodes info as inventory.ini file.
+
+Worker node -
+A remote system, or host, that Ansible controls.
+
+Passwordless SSH authentication -
+In order to access the worker machines from control machine, we need to first authenticate.
+Unlike Chef or Puppet, Ansible doesn't use Agents.
+It achieves it through SSH method , where in authorized keys of each remote machine we will add Public SSH key of control node
+ ~/.ssh/authorized_keys
+ 
